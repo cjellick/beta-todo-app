@@ -1,4 +1,7 @@
-FROM cgr.dev/chainguard/python:latest-dev
+FROM python:latest
+
+RUN apt-get update
+RUN apt-get install -y libpq-dev python3-psycopg2
 
 WORKDIR /app
 COPY requirements.txt .

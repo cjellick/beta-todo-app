@@ -6,7 +6,7 @@ from sqlalchemy import URL
 
 app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = URL.create(
-    "mysql+pymysql",
+    "postgresql+psycopg2",
     username=os.environ["DB_USER"],
     password=os.environ["DB_PASS"],
     host=os.environ["DB_HOST"],
