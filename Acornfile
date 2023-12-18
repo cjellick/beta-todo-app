@@ -1,0 +1,25 @@
+services: db: image: "ghcr.io/acorn-io/mariadb:v10.#.#-#"
+
+containers: {
+  db: {
+    image: "docker.io/postgres:16.1"
+    ports: ["5432/tcp"]
+    environment: {
+      "POSTGRES_PASSWORD": "secret1"
+      "POSTGRES_USER": "user1"
+      "POSTGRES_DB": "example"
+    }
+  }
+  app: {
+    build: context: "."
+    ports: publish: "8000/http"
+    consumes: "db"
+    env: {
+      DB_HOST: "postgres://db"
+      DB_PORT: "5432"
+      DB_NAME: "example"
+      DB_USER: "user1"
+      DB_PASS: "secret1"
+    }
+  }
+}
