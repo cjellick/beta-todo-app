@@ -43,3 +43,14 @@ acorn dev --name my-sample-app .
 If you start a dev session for an existing app, any changes you make will be temporary. The app will revert once you stop the dev session. To stop a dev session, use your typical terminal kill command (`Ctrl+C` on a Mac).
 
 If you run just start a brand new app via the dev command, the whole app is temporary. When you stop the dev session, the app will be deleted.
+
+### Next Steps
+Now you're cookin! If you're interest is piqued, here are some next steps you can take:
+- Install the [VS Code Acorn Plugin](https://marketplace.visualstudio.com/items?itemName=Acorn-Labs.acorn)
+- [Enable GitHub Actions integration](https://acorn.io) for this app so that every change you commit and push is automatically deployed
+- Checkout the Acorn CLI [cheatsheet](https://acorn.io)
+- Checkout our [library of pre-written Acorns](https://www.acorn.io/resources/library)
+- Dive into the [docs](https://docs.acorn.io)
+
+
+
